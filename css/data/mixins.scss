@@ -1,0 +1,47 @@
+@mixin basic-text-style () {
+    color: $basic-white;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-top: 5px;
+    letter-spacing: .05rem;
+    font-weight: 300;
+}
+@mixin basic-button-style () {
+    display: inline-block;
+    padding: 10px 30px;
+    color: $basic-red;
+    background-color: transparent;
+    border: 2px solid $basic-red;
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 36px;
+    transition: .35s ease background-color,
+                .2s ease color;
+    &:hover {
+        color: $basic-white;
+        background-color: $basic-red;
+    }
+}
+@mixin author-text-style () {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: $basic-white;
+    &--special-letters {
+        color: $basic-red;
+        font-size: 3rem;
+    }
+}
+@mixin burger-bar ($top-offset) {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: $basic-white;
+    transition-property: top, bottom;
+    transition: .3s ease;
+    top: $top-offset;
+}
